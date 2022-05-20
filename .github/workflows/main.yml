@@ -14,7 +14,7 @@ jobs:
         with:
           args: submodules:true
       - name: Upload website to Aliyun OSS
-        uses: ncuhome/ali-oss-website-action@1.1.0
+        uses: ncuhome/ali-oss-website-action@master
         id: upload
         with:
           folder: blog
