@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # 切代码到 runner
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
       with:
         submodules: true
     - name: Upload website to Aliyun OSS
