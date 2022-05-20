@@ -21,9 +21,9 @@ jobs:
       uses: ncuhome/ali-oss-website-action@v1.1.0
       id: upload
       with:
-        folder: BLOG
+        folder: ../BlogSource
         accessKeyId: ${{ secrets.ACCESSKEYID }}
         accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
-        bucket: tnxts-beijing-personal/blog
+        bucket: tnxts-beijing-personal
         endpoint: oss-cn-beijing.aliyuncs.com
         incremental: true
