@@ -13,7 +13,7 @@ jobs:
       with:
         submodules: true
     - name: check data
-      run: 
+      run: |
         ls -la
         cd ..
         ls -la
