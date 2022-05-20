@@ -24,6 +24,6 @@ jobs:
         folder: BLOG
         accessKeyId: ${{ secrets.ACCESSKEYID }}
         accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
-        bucket: tnxts-beijing-personal
+        bucket: tnxts-beijing-personal/blog
         endpoint: oss-cn-beijing.aliyuncs.com
         incremental: true
