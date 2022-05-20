@@ -21,7 +21,7 @@ jobs:
       uses: ncuhome/ali-oss-website-action@v1.1.0
       id: upload
       with:
-        folder: ../BlogSource
+        folder: ../
         accessKeyId: ${{ secrets.ACCESSKEYID }}
         accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
         bucket: tnxts-beijing-personal
