@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    # 切代码到 runner
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
     - name: Upload website to Aliyun OSS
       uses: ncuhome/ali-oss-website-action@v1.1.0
       id: upload
