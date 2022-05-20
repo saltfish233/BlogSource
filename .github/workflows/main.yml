@@ -12,6 +12,11 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
+    - name: check data
+      run: 
+        ls -la
+        cd ..
+        ls -la
     - name: Upload website to Aliyun OSS
       uses: ncuhome/ali-oss-website-action@v1.1.0
       id: upload
