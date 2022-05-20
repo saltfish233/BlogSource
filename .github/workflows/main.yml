@@ -8,24 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # 切代码到 runner
-    - uses: actions/checkout@v1
-      with:
-        submodules: true
-    # 使用 node:10
-    - name: use Node.js 10.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.x
-    # npm install
-    - name: npm install and build
-      run: |
-        npm install
-        npm run build
-      env:
-        CI: true
     - name: Upload website to Aliyun OSS
-      uses: ncuhome/ali-oss-website-action@master
+      uses: ncuhome/ali-oss-website-action@v1.1.0
       id: upload
       with:
         folder: blog
