@@ -1,0 +1,29 @@
+name: Deploytoaliyunoss
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # 切代码到 runner
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: check data
+      run: |
+        ls -la
+        cd ..
+        ls -la
+    - name: Upload website to Aliyun OSS
+      uses: ncuhome/ali-oss-website-action@v1.1.0
+      id: upload
+      with:
+        folder: ../
+        accessKeyId: ${{ secrets.ACCESSKEYID }}
+        accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
+        bucket: tnxts-beijing-personal
+        endpoint: oss-cn-beijing.aliyuncs.com
+        incremental: true
