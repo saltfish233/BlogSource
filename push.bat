@@ -1,2 +1,2 @@
 cd /d %~dp0
-git add . && git commit -m \"feat: 新增博客图片\" && git pull && git push
+git add . && git commit -m "feat: 新增博客图片" && git pull && git push
